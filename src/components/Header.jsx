@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <h1>
-            Hola desde Header
+            Este es el header
         </h1>
     )
 }
