@@ -1,35 +1,33 @@
 ---
-import Header from '../components/Header';
+import Header from '../components/Header.astro';
 
- 
 interface Props {
-title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="Astro description">
+        <meta name="description" content="Astro description" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
     <body>
         <Header/>
-        <slot />
+        <main>
+            <slot />
+        </main>
     </body>
 </html>
 <style is:global>
     html {
-        font-family: system-ui, sans-serif;
         height: 100%;
-    }
-    code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-        Bitstream Vera Sans Mono, Courier New, monospace;
+        background: linear-gradient(to bottom, #fab566, #ffdaaf);
+        color-scheme: dark light;
     }
 </style>
